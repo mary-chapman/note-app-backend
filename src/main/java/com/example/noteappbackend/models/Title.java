@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,4 +25,8 @@ public class Title {
     @JoinColumn(name="user_id")
     @JsonIgnoreProperties("titles")
     public User user;
+
+    @OneToMany(mappedBy="title", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("title")
+    public List<Header> headers = new ArrayList<>();
 }

@@ -19,7 +19,4 @@ public class TitleController {
     public Iterable<Title> findAllTitles() {
         return titleRepository.findAll();
     }
-
-
-
 }

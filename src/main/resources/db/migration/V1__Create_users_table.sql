@@ -13,3 +13,10 @@ create table TITLES (
         REFERENCES USERS (ID)
 );
 
+create table HEADERS (
+    ID serial PRIMARY KEY,
+    TITLE_ID integer,
+    TEXT varchar(100),
+    CONSTRAINT TITLE_ID FOREIGN KEY(TITLE_ID)
+        REFERENCES TITLES (ID)
+);
