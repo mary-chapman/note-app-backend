@@ -29,4 +29,8 @@ public class Header {
     @OneToMany(mappedBy="header", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("header")
     public List<Para> paras = new ArrayList<>();
+
+    @OneToMany(mappedBy="header", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("header")
+    public List<Codeblock> codeblocks = new ArrayList<>();
 }

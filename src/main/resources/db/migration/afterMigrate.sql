@@ -24,3 +24,9 @@ INSERT INTO PARAS
 VALUES
     (1, 'html stands for hypertext markup language'),
     (3, 'react and angular are 2 popular frameworks');
+
+INSERT INTO CODEBLOCKS
+    (HEADER_ID, TEXT)
+VALUES
+    (1, '<h1>this is a tag</h1>'),
+    (2, 'h1: { color: blue }');
