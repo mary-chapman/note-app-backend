@@ -12,9 +12,10 @@ import java.util.List;
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity @Table(name = "TITLES")
-public class Title {
+@Entity @Table(name = "NOTES")
+public class Note {
     @Id
+    @Column(name = "ID")
     private String id;
 
     @Column(name = "TEXT")
@@ -22,10 +23,7 @@ public class Title {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name="USER_ID")
-    @JsonIgnoreProperties("titles")
+    @JsonIgnoreProperties("notes")
     public User user;
 
-    @OneToMany(mappedBy="title", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("title")
-    public List<Header> headers = new ArrayList<>();
 }

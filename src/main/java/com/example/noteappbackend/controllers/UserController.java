@@ -21,7 +21,8 @@ public class UserController {
     }
 
     @GetMapping("/users/{userId}")
-    public User getBookById(@PathVariable Long userId) {
-        return userRepository.findById(userId).get();
+    public User getBookById(@PathVariable String userId) {
+        return userRepository.findById(userId);
     }
+
 }
