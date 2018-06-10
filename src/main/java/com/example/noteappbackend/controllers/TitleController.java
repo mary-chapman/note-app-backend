@@ -19,4 +19,9 @@ public class TitleController {
     public Iterable<Title> findAllTitles() {
         return titleRepository.findAll();
     }
+
+    @GetMapping("{userId}/titles/{titleName}")
+    public Iterable<Title> getTitleByName(@PathVariable Long userId, @PathVariable String titleName) {
+        return titleRepository.findByUserIdAndText(userId, titleName);
+    }
 }

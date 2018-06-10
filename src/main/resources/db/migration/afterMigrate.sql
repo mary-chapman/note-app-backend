@@ -7,11 +7,14 @@ VALUES
 INSERT INTO TITLES
     (USER_ID, TEXT)
 VALUES
-    (2, 'TITLE A'),
-    (2, 'TITLE B');
+    (1, 'frontend'),
+    (1, 'backend');
 
 INSERT INTO HEADERS
     (TITLE_ID, TEXT)
 VALUES
-    (1, 'HEADER A'),
-    (2, 'HEADER B');
+    (1, 'html'),
+    (1, 'css'),
+    (1, 'frameworks'),
+    (2, 'databases'),
+    (2, 'servers');
