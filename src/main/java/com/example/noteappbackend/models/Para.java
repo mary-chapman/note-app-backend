@@ -4,16 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity @Table(name = "HEADERS")
-public class Header {
+@Entity @Table(name = "PARAS")
+public class Para {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -22,11 +20,7 @@ public class Header {
     private String text;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="title_id")
-    @JsonIgnoreProperties("headers")
-    public Title title;
-
-    @OneToMany(mappedBy="header", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("header")
-    public List<Para> paras = new ArrayList<>();
+    @JoinColumn(name="header_id")
+    @JsonIgnoreProperties("paras")
+    public Header header;
 }

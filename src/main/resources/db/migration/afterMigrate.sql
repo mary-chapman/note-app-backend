@@ -1,8 +1,8 @@
 INSERT INTO USERS
     (USERNAME, EMAIL, PASSWORD)
 VALUES
-    ('user 1', 'hi@gmail.com', 'password'),
-    ('user 1', 'hi@gmail.com', 'password');
+    ('user1', 'hi@gmail.com', 'password'),
+    ('user2', 'hi@gmail.com', 'password');
 
 INSERT INTO TITLES
     (USER_ID, TEXT)
@@ -18,3 +18,9 @@ VALUES
     (1, 'frameworks'),
     (2, 'databases'),
     (2, 'servers');
+
+INSERT INTO PARAS
+    (HEADER_ID, TEXT)
+VALUES
+    (1, 'html stands for hypertext markup language'),
+    (3, 'react and angular are 2 popular frameworks');
