@@ -10,5 +10,5 @@ public interface TitleRepository extends CrudRepository<Title, Long> {
 //    List<Title> findByuser_id(String userId);
 //    List<Title> findByText(String title);
 
-    List<Title> findByUserIdAndText(Long userId, String title);
+    List<Title> findByUser_IdAndText(String username, String title);
 }

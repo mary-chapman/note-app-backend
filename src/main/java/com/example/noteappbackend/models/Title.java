@@ -15,14 +15,13 @@ import java.util.List;
 @Entity @Table(name = "TITLES")
 public class Title {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     @Column(name = "TEXT")
     private String text;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name="user_id")
+    @JoinColumn(name="USER_ID")
     @JsonIgnoreProperties("titles")
     public User user;
 

@@ -1,16 +1,15 @@
 create table USERS (
-    ID serial PRIMARY KEY,
-    USERNAME varchar(100),
+    id varchar(100) PRIMARY KEY,
     EMAIL varchar(100),
     PASSWORD varchar(100)
 );
 
 create table TITLES (
     ID serial PRIMARY KEY,
-    USER_ID integer,
+    USER_ID varchar(100),
     TEXT varchar(100),
     CONSTRAINT USER_ID FOREIGN KEY(USER_ID)
-        REFERENCES USERS (ID)
+        REFERENCES USERS (id)
 );
 
 create table HEADERS (

@@ -1,14 +1,14 @@
 INSERT INTO USERS
-    (USERNAME, EMAIL, PASSWORD)
+    (ID, EMAIL, PASSWORD)
 VALUES
-    ('user 1', 'hi@gmail.com', 'password'),
-    ('user 1', 'hi@gmail.com', 'password');
+    ('user1', 'hi@gmail.com', 'password'),
+    ('user2', 'bye@gmail.com', 'password');
 
 INSERT INTO TITLES
     (USER_ID, TEXT)
 VALUES
-    (1, 'frontend'),
-    (1, 'backend');
+    ('user1', 'frontend'),
+    ('user2', 'backend');
 
 INSERT INTO HEADERS
     (TITLE_ID, TEXT)
