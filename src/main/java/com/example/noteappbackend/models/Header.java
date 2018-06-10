@@ -33,4 +33,12 @@ public class Header {
     @OneToMany(mappedBy="header", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("header")
     public List<Codeblock> codeblocks = new ArrayList<>();
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }

@@ -4,10 +4,8 @@ package com.example.noteappbackend.controllers;
 import com.example.noteappbackend.models.User;
 import com.example.noteappbackend.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @RestController
@@ -24,4 +22,17 @@ public class UserController {
     public User getBookById(@PathVariable Long userId) {
         return userRepository.findById(userId).get();
     }
+
+//    @DeleteMapping("/users/{userId}")
+//    public HttpStatus deleteUserById(@PathVariable Long userId) {
+//        userRepository.deleteById(userId);
+//        return HttpStatus.OK;
+//    }
+
+//    @DeleteMapping("/users/{userId}/{titleId}")
+//    public HttpStatus deleteTitleByUserId(@PathVariable Long userId, @PathVariable Long titleId) {
+//        userRepository.deleteById(findByUserIdAndTitle);
+//        return HttpStatus.OK;
+//    }
+
 }
