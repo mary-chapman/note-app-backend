@@ -23,4 +23,28 @@ public class Codeblock {
     @JoinColumn(name="header_id")
     @JsonIgnoreProperties("codeblocks")
     public Header header;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public Header getHeader() {
+        return header;
+    }
+
+    public void setHeader(Header header) {
+        this.header = header;
+    }
 }
