@@ -34,13 +34,13 @@ public class HeaderController {
         return HttpStatus.OK;
     }
 
-//    @PatchMapping("/headers/{headerId}")
-//    public Header updateHeaderById(@PathVariable Long headerId, @RequestBody Header headerRequest) {
-//
-//        Header headerFromDb = headerRepository.findById(headerId).get();
-//        headerFromDb.setText(headerRequest.getText());
-//        return headerRepository.save(headerFromDb);
-//
-//    }
+    @PatchMapping("/headers/{headerId}")
+    public Header updateHeaderById(@PathVariable Long headerId, @RequestBody Header headerRequest) {
+
+        Header headerFromDb = headerRepository.findById(headerId).get();
+        headerFromDb.setText(headerRequest.getText());
+        return headerRepository.save(headerFromDb);
+
+    }
 
 }
